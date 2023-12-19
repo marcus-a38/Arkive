@@ -1,0 +1,238 @@
+/* NEEDS REORGANIZATION, VERY MESSY! */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* document */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    position: relative;
+    min-height: 100%;
+    padding: 55.38px 0px 45px 0px; /* account for footer & header height */
+    background: #3E1270;
+}
+
+#intro {
+    background: url(img/background.jpg);
+}
+
+nav, footer {
+    background: #25053F;
+}
+
+#notifications {
+    display: inline-block;
+    min-height: 20px;
+    min-width: 20px;
+    border-radius: 50%;
+    background-color: #C293F8;
+    color: #ffffff;
+    text-align: center;
+    line-height: 20px;
+}
+
+.purple-gradient-text {
+    background: linear-gradient(180deg, rgb(51,7,111), rgb(120,9,199));
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.form-main {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 25px auto;
+    justify-content: center;
+}
+
+.link-light {
+    color: rgb(202, 202, 202) !important;
+}
+
+#form-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#form-buttons button[type="reset"] {
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    border: none;
+    color: darkolivegreen;
+    background-color: transparent;
+    opacity: 0;
+    display: none;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#main-button {
+    min-width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 24px;
+}
+
+#body {
+    min-height: 800px;
+}
+
+#browse {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+}
+
+.field-button {
+    cursor:pointer; 
+    border:none; 
+    width:30px; 
+    height:30px;
+    border-radius: 50%;
+    line-height: 30px;
+}
+
+#control-button {
+    background: url(img/plus-icon-s.png) no-repeat; 
+    background-size: 30px; 
+}
+
+.field-button-r {
+    background: url(img/x-icon.png) no-repeat;
+    background-size: 30px; 
+}
+
+
+.form-main h2 {
+    height: 75px;
+    background-color: rgb(86, 15, 201);
+}
+
+form a {
+    color: rgb(158, 129, 185) !important;
+}
+
+form a:hover {
+    color: rgb(135, 107, 161)!important; 
+}
+
+
+
+/* Loading Animation */
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+#load {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.spinner-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+
+.solar-system {
+
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.orbit {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
+
+.planet {
+
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+}
+
+.planet-1 {
+    background-color:rgb(166, 98, 230);
+}
+
+.planet-2 {
+    background-color:rgb(79, 157, 180);
+}
+
+.planet-3 {
+    background-color:rgb(231, 238, 127);
+}
+
+.orbit-1 {
+
+    width: 175px;
+    height: 175px;
+    -webkit-animation: spin 12s linear 0s infinite;
+    animation: spin 12s linear 0s infinite;
+
+}
+
+.orbit-2 {
+
+    width: 125px;
+    height: 125px;
+    -webkit-animation: spin 7.5s linear 0s infinite;
+    animation: spin 7.5s linear 0s infinite;
+
+}
+
+.orbit-3 {
+
+    width: 85px;
+    height: 85px;
+    -webkit-animation: spin 3s linear 0s infinite;
+    animation: spin 3s linear 0s infinite;
+
+}
+
+.sun {
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: cornsilk;
+
+}
