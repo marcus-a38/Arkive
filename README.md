@@ -1,66 +1,39 @@
 # The Arkive
-#### A project completed for my Database and DB Design class. To be utilized by my dad to track his vast music collection.
 
-<span>____</span>
+A comprehensive music collection maintained by two music collection hobbyists and a developer.
 
-This database was designed, normalized, and implemented over the course of a few months, and I utilized the Database Life Cycle (DBLC) in the process.
-Below, you'll find a basic glossary detailing the database schema, and a few other tidbits of information. For the sake of reducing complexity in the class, 
-datatypes were ignored for table fields. However, the datatypes should be relatively easy to infer.
+---
 
-<span>____</span>
+## About
 
-## The Process
+Over the course of several decades, my dad has collected a substantial heap of music material. 
+He has amassed around 1 TB in audio files and relevant multimedia documents as a huge fan of 
+afrofuturism, jazz, vintage music, records, and more. 
 
-SECTION TO BE COMPLETED ...
+In early 2023, I began work on designing a database to organize this vast collection, and to
+provide a simple mechanism with a friendly interface for my dad to use in his music-related activities.
+The idea has evolved into a public databank where fellow hobbyists will eventually explore and 
+chat about unique and novelty tracks.
 
-## The Schema
+In late 2023, I began work on the frontend web component of the project. As of December 2023, the
+website is *not* complete, but simple functionalities have been established in regards to session
+handling and the API. Bootstrap is used liberally throughout the website as a frontend framework for convenience.
 
-1. **Tables**:
+---
 
-   - **Session**: An umbrella term for tracks that make up an event, album, or anything in that realm.
-     - **(PK)** Session ID
-     - Title
-     - Release Date (formatted as yyyy-mm-dd)
-     - Description (a one line description of the session
+*I am willing to discuss the possibility of collaboration. Please
+contact me at **contact@marcusantonelli.com** with any inquiries.*
 
+---
 
-   - **Artist**: Self explanatory, very basic table that contains all artists found in the collection.
-     - **(PK)** Artist ID
-     - Full Name (first and last)
+## Database
 
+### Schema
 
-   - **Track**: An individual composition, performance, or song found in a session. 
-     - **(PK)** Track ID
-     - **(FK)** Session ID
-     - **(FK)** Artist ID
-     - Title
-     - Length (formatted as mm:ss)
+### Relationships
 
+## Web
 
-   - **Session Note**: A relatively lengthy detailing of a session, or tracks within that session.
-     - **(PK)** Note ID
-     - **(FK)** Session ID
-     - Content 
+### PHP, MySQL, and API
 
-
-   - **Attachment**: Contains (granular) paths for attachments relating to a session, to be used for lookup or pointing.
-     - **(PK)** Attachment ID
-     - **(FK)** Session ID
-     - Directory
-     - File Name
-     - Extension
-
-2. **Relationships**:
-
-   - Below are all of the existing relationships, including verbs and cardinality.
-     - **Session** *contains* **Attachment** (one to many)
-     - **Session** *described by* **Session Notes** (one to many)
-     - **Session** *and* **Artist** *form* **Track** (many to many)
- 
- ## Queries
-
-Four basic queries were created for this project, but many more are necessary for a fully functional database. This project is intended to be continued
-and adapted into a web interface, so various other tables and fields may be required, as well. Since the database is in its infancy, it should also be 
-expected to be implemented in a DBMS with higher performance and control. MS Access will likely not make the cut for web purposes. 
-
-SECTION TO BE EXPANDED...
+### JavaScript, CSS, & Bootstrap
