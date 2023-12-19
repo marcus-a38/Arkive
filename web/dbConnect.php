@@ -8,7 +8,7 @@ $dbpassword = ?
 $conn;
 
 function db_connect() {
-  	global $servername, $dbusername, $dbpassword, $dbname, $conn;
+	global $servername, $dbusername, $dbpassword, $dbname, $conn;
 
   	$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
   	if ($conn->connect_error) return false;
